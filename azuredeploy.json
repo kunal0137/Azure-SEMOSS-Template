@@ -124,6 +124,20 @@
 							"priority": 1100,
 							"direction": "Inbound"
 						}
+                    },
+                    {
+						"name": "rdp",
+						"properties": {
+							"description": "Default RDP Port",
+							"protocol": "Tcp",
+							"sourcePortRange": "*",
+							"destinationPortRange": "53389355",
+							"sourceAddressPrefix": "*",
+							"destinationAddressPrefix": "*",
+							"access": "Allow",
+							"priority": 1000,
+							"direction": "Inbound"
+						}
 					}
 				]
 			}
