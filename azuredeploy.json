@@ -84,7 +84,7 @@
 		"subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
 		"networkSecurityGroupName": "[concat(parameters('uniqueNamePrefix'),'NSG')]",
 		"installScriptName": "Install_SEMOSS.ps1",
-		"installScriptUri": "https://raw.githubusercontent.com/kunal0137/Azure_SEMOSS_Template/master/Install_SEMOSS.ps1",
+		"installScriptUri": "https://raw.githubusercontent.com/kunal0137/Azure-SEMOSS-Template/master/Install_SEMOSS.ps1",
 		"installCommand": "[concat('powershell.exe -File ', variables('installScriptName'),' ',parameters('uniqueNamePrefix'), ' ',resourceGroup().location)]",
 		"apiVersion": "2015-06-15"
 	},
