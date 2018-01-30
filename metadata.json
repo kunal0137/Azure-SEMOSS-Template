@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Deploy SEMOSS on Windows (single VM)",
+  "description": "This template deploys SEMOSS on a Windows server. It creates a single Windows VM, installs SEMOSS< Google Chrome, confugres ports on Azure NSG and Windows Firewall. It will take 15-20 minutes to install and once it is successful, SEMOSS can be reach through your local comupeter at http://<IP/DNS>:5355/SemossWeb/#!/playbook",
+  "summary": "Deploy SMEOSS on Windows on a single VM.",
+  "githubUsername": "kunal0137",
+  "dateUpdated": "2018-01-30"
+}
