@@ -38,6 +38,7 @@
       "type": "string",
       "defaultValue": "Standard_D4S_V3",
       "allowedValues": [
+        "Standard_D4S_V3",
         "Standard_A0",
         "Standard_A1",
         "Standard_A2",
