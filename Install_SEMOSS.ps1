@@ -1,4 +1,4 @@
-﻿Write-Host 'Please allow several minutes for the install to complete. '
+Write-Host 'Please allow several minutes for the install to complete. '
 
 
 # Install Google Chrome x64 on 64-Bit systems? $True or $False
@@ -170,7 +170,7 @@ Clean-up
 
 Write-Host 'Opening firewall ports'
 netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
-netsh advfirewall firewall add rule name="Open Port 5355" dir=in action=allow protocol=TCP localport=443
+netsh advfirewall firewall add rule name="Open Port 5355" dir=in action=allow protocol=TCP localport=5355
 
 Write-Host 'Editing start-up scripts'
 
@@ -179,6 +179,7 @@ $T = New-ScheduledTaskTrigger -AtStartup
 $principal = New-ScheduledTaskPrincipal -UserID "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 Register-ScheduledTask StartSemossStartup -Action $Act -Trigger $T -Principal $principal
 
-cd c:\SEMOSS_v3.1_x64
-"n"|.\startSEMOSS.bat
+
+
+start powershell { cd c:\SEMOSS_v3.1_x64; 'n'|.\startSEMOSS.bat}
 
