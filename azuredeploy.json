@@ -131,7 +131,7 @@
 							"description": "Default RDP Port",
 							"protocol": "Tcp",
 							"sourcePortRange": "*",
-							"destinationPortRange": "53389355",
+							"destinationPortRange": "3389",
 							"sourceAddressPrefix": "*",
 							"destinationAddressPrefix": "*",
 							"access": "Allow",
