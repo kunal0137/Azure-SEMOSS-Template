@@ -107,7 +107,7 @@ Function Download-SEMOSS {
 
     # Test internet connection
     if (Test-Connection semoss.org -Count 3 -Quiet) {
-			$Link = 'http://semoss.org/download/SEMOSS_v3.1_x64.zip'
+			$Link = 'http://semoss.org/download/SEMOSS_v3.2_x64.zip'
 		 
     
 
@@ -174,12 +174,12 @@ netsh advfirewall firewall add rule name="Open Port 5355" dir=in action=allow pr
 
 Write-Host 'Editing start-up scripts'
 
-$Act = New-ScheduledTaskAction -Execute "C:\SEMOSS_v3.1_x64\startSEMOSS.bat" -WorkingDirectory C:\SEMOSS_v3.1_x64
+$Act = New-ScheduledTaskAction -Execute "C:\SEMOSS_v3.2_x64\startSEMOSS.bat" -WorkingDirectory C:\SEMOSS_v3.2_x64
 $T = New-ScheduledTaskTrigger -AtStartup
 $principal = New-ScheduledTaskPrincipal -UserID "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 Register-ScheduledTask StartSemossStartup -Action $Act -Trigger $T -Principal $principal
 
 
 
-start powershell { cd c:\SEMOSS_v3.1_x64; 'n'|.\startSEMOSS.bat}
+start powershell { cd c:\SEMOSS_v3.2_x64; 'n'|.\startSEMOSS.bat}
 
